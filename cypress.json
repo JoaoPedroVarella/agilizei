@@ -2,6 +2,7 @@
     "$schema": "https://raw.githubusercontent.com/cypress-io/cypress/develop/cli/schema/cypress.schema.json",
     "baseUrl": "http://demo.automationtesting.in",
     "experimentalSourceRewriting": true,
+    "video": false,
     "integrationFolder": "./cypress/integration/",
     "pluginsFile": "cypress/plugins/index.js",
     "reporter": "cypress-multi-reporters",
