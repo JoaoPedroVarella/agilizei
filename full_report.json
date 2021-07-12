@@ -1,0 +1,121 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-08T21:18:25.066Z",
+    "end": "2021-07-08T21:19:26.675Z",
+    "duration": 60988,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "175698f7-0e3b-4240-903b-fc1c18835ef0",
+      "title": "",
+      "fullFile": "cypress\\integration\\listagem.spec.js",
+      "file": "cypress\\integration\\listagem.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4a304611-e4be-4d61-ab3e-39fabe8a9279",
+          "title": "Listagem",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Listagem sem registro",
+              "fullTitle": "Listagem Listagem sem registro",
+              "timedOut": null,
+              "duration": 40667,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: 'GET',\n  url: '**//api/1/databases/userdetails/collections/newtable?**',\n  status: 200,\n  response: []\n});\ncy.visit('WebTable.html'); //utiliza para verificar o tamanho\ncy.get('div[role=row]').should('have.length', 1);",
+              "err": {},
+              "uuid": "2c62dcd2-d962-4b5a-9451-c3f2b866047f",
+              "parentUUID": "4a304611-e4be-4d61-ab3e-39fabe8a9279",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Listagem com registro",
+              "fullTitle": "Listagem Listagem com registro",
+              "timedOut": null,
+              "duration": 20321,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: 'GET',\n  url: '**//api/1/databases/userdetails/collections/newtable?**',\n  status: 200,\n  response: 'fixture:webtable-get-unico'\n});\ncy.visit('WebTable.html');\ncy.get('div[role=row] div[role=gridcell]').eq(4).find('div').as('gridCellPhone');\ncy.get('@gridCellPhone').should('contain.text', '1234567890');\n/* iteração com lista  \n    -> 1º .first\n    -> .eq(Posição)\n    -> ultimo .last\n*/",
+              "err": {},
+              "uuid": "22398d9f-96be-474a-9088-771a18ba8418",
+              "parentUUID": "4a304611-e4be-4d61-ab3e-39fabe8a9279",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2c62dcd2-d962-4b5a-9451-c3f2b866047f",
+            "22398d9f-96be-474a-9088-771a18ba8418"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 60988,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

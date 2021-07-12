@@ -1,0 +1,14 @@
+
+    {
+        "reporterEnabled": "mochawesome",
+        "reportOptions": {
+            "reportDir": "mochawesome-report",
+            "quiet" : true,
+            "overwrite": false,
+            "html": false,
+            "json": true,
+            "code": false,
+            "charts": true,
+            "timestamp": "mm_dd_yyyy__HH_MM"
+        }
+    }

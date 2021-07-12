@@ -1,0 +1,12 @@
+{
+    "$schema": "https://raw.githubusercontent.com/cypress-io/cypress/develop/cli/schema/cypress.schema.json",
+    "baseUrl": "http://demo.automationtesting.in",
+    "experimentalSourceRewriting": true,
+    "integrationFolder": "./cypress/integration/",
+    "pluginsFile": "cypress/plugins/index.js",
+    "reporter": "cypress-multi-reporters",
+    "defaultCommandTimeout": 10000,
+    "requestTimeout": 10000,
+    "watchForFileChanges": false,
+    "testFiles": "**/*.{feature, features}"
+}

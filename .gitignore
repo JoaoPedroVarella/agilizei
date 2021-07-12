@@ -1,0 +1,12 @@
+node.modules/
+
+mochawesome-report
+
+cypress/reports/index.html
+cypress/reports/cucumber_report.html.json
+cypress/reports/cucumber-json/**
+
+cypress/videos
+
+.ds_Store
+
