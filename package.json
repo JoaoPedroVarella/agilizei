@@ -9,6 +9,7 @@
     "cy-run": "npx cypress run",
     "cy-open-cucumber": "npx cypress open --config-file cypress-cucumber.json",
     "cy-run-cucumber": "npx cypress run --config-file cypress-cucumber.json",
+    "report-cucumber": "node cypress/reports/reporter.js",
     "report-merge": "mochawesome-merge > full_report.json",
     "report-mocha": "marge full_report.json",
     "report-clean": "rm -rf mochawesome-report full_report.json cypress/reports/cucumber-json/**"
